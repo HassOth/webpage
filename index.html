@@ -1,21 +1,5 @@
 <!doctype html>
-<!--
-  Xtream Nova — trailer host page.
 
-  YouTube's embedded player refuses to play unless it can identify the web
-  page hosting it (error 153). An app's WebView has no web identity, so this
-  page provides one: the app loads  https://<your-domain>/?v=<youtube-key>
-  and the player runs here, legitimately.
-
-  Contract with the app (TrailerPlayerView):
-   - reads the YouTube key from the `v` query parameter (validated)
-   - posts 'playing' / 'error' to webkit.messageHandlers.player when present,
-     so the app can fade the video in, or silently keep its photo
-   - plays inline, sound on, looping, no controls — the app's hero look
-
-  This file is self-contained and static: nothing to build, nothing to
-  maintain, no data collected.
--->
 <html lang="en">
 <head>
 <meta charset="utf-8">
